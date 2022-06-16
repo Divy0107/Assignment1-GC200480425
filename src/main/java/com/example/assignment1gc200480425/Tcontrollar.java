@@ -1,6 +1,7 @@
 package com.example.assignment1gc200480425;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -8,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -55,12 +57,10 @@ public class Tcontrollar implements Initializable {
         tblv.getItems().addAll(DbUtility.getBattingFromDB());
 
 
-
-
-
-
-
-
+    }
+    @FXML
+    private void chartView(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event,"Chartview.fxml");
     }
 }
 
